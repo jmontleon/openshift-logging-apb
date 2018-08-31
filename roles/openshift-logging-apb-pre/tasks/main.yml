@@ -4,7 +4,7 @@
 #After that we copy it to /etc/origin/master/ where the logging modules expect it
 
 - name: Copy the admin config to the home dir
-  shell: cp /tmp/admin.kubeconfig /opt/apb/.kube/config
+  shell: cp /tmp/logging-config/admin.kubeconfig /opt/apb/.kube/config
 
 - name: Update the admin config server setting so it's reachable with a container
   shell: oc config set-cluster 127-0-0-1:8443 --server=https://kubernetes.default
